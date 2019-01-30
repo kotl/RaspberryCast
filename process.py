@@ -152,7 +152,7 @@ def playWithOMX(url, sub, width="", height="", new_log=False):
     setState("1")
     if sub:
         os.system(
-            "omxplayer -b -r -o both '" + url + "'" + resolution +
+            "omxplayer -b -r -o alsa '" + url + "'" + resolution +
             " --vol " + str(volume) +
             " --subtitles subtitle.srt < /tmp/cmd"
         )
@@ -160,7 +160,7 @@ def playWithOMX(url, sub, width="", height="", new_log=False):
         pass
     else:
         os.system(
-            "omxplayer -b -r -o both '" + url + "' " + resolution + " --vol " +
+            "omxplayer -b -r -o alsa '" + url + "' " + resolution + " --vol " +
             str(volume) + " < /tmp/cmd"
         )
 
